@@ -4,45 +4,45 @@
 
 /*--------------------RESET--------------------*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-family: 'Albert Sans';
     font-size: 45px;
 }
 
 
-h2{
+h2 {
     font-family: 'Open Sans';
     font-size: 25px;
 }
 
-h3{
+h3 {
     font-family: 'Open Sans';
     font-size: 18px;
 }
 
-p{
+p {
     font-family: 'League Gothic', sans-serif;
 }
 
-ul{
+ul {
     list-style: none;
     font-family: 'League Gothic', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
 /*--------------------HEADER--------------------*/
 
-header{
+header {
     background-color: rgba(246, 203, 207);
     height: 5vh;
     position: sticky;
@@ -51,9 +51,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
-.header-logo a img{
+.header-logo a img {
     height: 90px;
     margin-top: 60px;
     margin-left: 20px;
@@ -62,18 +63,18 @@ header{
     border-radius: 50%;
 }
 
-.header-menu{
+.header-menu {
     font-family: 'Shantell Sans';
     font-size: 20px;
     color: #373435;
     display: inline-block;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
 }
 
-header nav ul li{
+header nav ul li {
     display: flex;
     margin: 5px 5px 10px 5px;
     padding: 5px 10px 5px 10px;
@@ -81,14 +82,14 @@ header nav ul li{
     border-radius: 10%;
 }
 
-.header-tools a img{
+.header-tools a img {
     height: 32px;
     margin: 5px;
 }
 
 /*--------------------MAIN--------------------*/
 
-.main-hero{
+.main-hero {
     background-image: url(../img/hero.jpg);
     width: 100%;
     height: 57.7vh;
@@ -102,7 +103,7 @@ header nav ul li{
     align-items: center;
 }
 
-.main-hero h1{
+.main-hero h1 {
     font-family: 'Shantell Sans';
     font-size: 5.5rem;
 }
@@ -116,7 +117,7 @@ header nav ul li{
     padding: 20px;
 }
 
-.main-hero a{
+.main-hero a {
     font-family: 'League Gothic', sans-serif;
     font-size: 2.5rem;
     color: white;
@@ -143,7 +144,7 @@ header nav ul li{
     margin: 3px 3px 3px 3px;
 }
 
-.main-section-catalog div h2{
+.main-section-catalog div h2 {
     color: white;
     font-size: 15px;
     margin-top: 5px;
@@ -151,7 +152,7 @@ header nav ul li{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.main-section-agendas{
+.main-section-agendas {
     width: 33.3%;
     height: 40vh;
     background-image: url(../img/agenda.jpg);
@@ -159,7 +160,7 @@ header nav ul li{
     background-size: cover;
 }
 
-.main-section-productos{
+.main-section-productos {
     width: 33.3%;
     height: 40vh;
     background-image: url(../img/productos.jpg);
@@ -168,7 +169,7 @@ header nav ul li{
     margin: 0px 3px 0px 3px;
 }
 
-.main-section-madre{
+.main-section-madre {
     width: 33.3%;
     height: 40vh;
     background-image: url(../img/especial-madre.jpg);
@@ -176,16 +177,16 @@ header nav ul li{
     background-size: cover;
 }
 
-.main-section-especiales{
+.main-section-especiales {
     background-color: rgba(240, 215, 122, 20%);
-    height: 47.5vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.main-section-especiales h3{
+.main-section-especiales h3 {
     color: #572b2f;
     font-family: 'Shantell Sans';
     text-align: center;
@@ -214,13 +215,14 @@ header nav ul li{
     text-align: justify;
 }
 
-.main-section-especiales div img{
-    width: 20%;
-    height: 20vh;
+.main-section-especiales div img {
+    width: 30%;
+    height: 25vh;
     border: 3px solid white;
+    object-fit: cover;
 }
 
-.main-section-especiales div a{
+.main-section-especiales div a {
     font-family: 'Open Sans';
     font-size: 20px;
     color: black;
@@ -238,7 +240,7 @@ header nav ul li{
 
 /*--------------------PRODUCTOS--------------------*/
 
-.main-productos{
+.productos-main {
     background-image: url(../img/hero.jpg);
     width: 100%;
     height: 60vh;
@@ -250,6 +252,43 @@ header nav ul li{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.productos-catalogo-grid {
+    width: 100%;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: 1fr;
+    gap: 12px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.productos-catalogo-grid h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.productos-catalogo-grid div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px 0px rgba(69,67,45,0.5);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(69,67,45,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(69,67,45,0.5);
+}
+
+.img-span {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 /* Para la galería de productos utilizar flex-wrap: wrap; la función distribuye la galeria manteniendo los productos dentro de la pantalla*/
@@ -265,11 +304,11 @@ footer section {
     justify-content: space-around;
 }
 
-.footer-section-siguenos a img{
+.footer-section-siguenos a img {
     height: 32px;
 }
 
-.footer-section-tools{
+.footer-section-tools {
     display: block;
     height: 40px;    
     background-color: rgba(128, 128, 128, 0.1);
@@ -278,18 +317,48 @@ footer section {
     align-items: center;
 }
 
-.footer-section-terminos ul{
+.footer-section-terminos ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fixed-logo{
+.fixed-logo {
     position: fixed;
     right: 25px;
     bottom: 25px;
 }
 
-.fixed-logo a img{
+.fixed-logo a img {
     height: 50px;
+}
+
+/*!--------------------MEDIA QUERY--------------------*/
+
+@media screen and (max-width:1000px) {
+
+    .productos-catalogo-grid {
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 1fr;
+        gap: 12px;
+    }
+
+    .grid-item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    .productos-catalogo-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .productos-catalogo-grid {
+        grid-template-columns: 1fr;
+    }
 }
